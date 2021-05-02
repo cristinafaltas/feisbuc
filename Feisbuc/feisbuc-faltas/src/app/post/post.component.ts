@@ -10,6 +10,7 @@ export class PostComponent implements OnInit {
   @Input() post;
   @Input() user;
   nLike : number= 0;
+  commentList : Array<string> = new Array<string>();
   constructor() { }
 
   ngOnInit(): void {
@@ -17,5 +18,10 @@ export class PostComponent implements OnInit {
   like()
   {
     this.nLike ++;
+  }
+
+  commenta(commento : string)
+  {
+    this.commentList.push(commento);
   }
 }
